@@ -1,35 +1,27 @@
 import { ChevronDown } from "lucide-react";
-import heroImage from "@/assets/drahozica-jesen.jpeg";
+import heroImage from "@/assets/dolina-jar.jpeg";
 
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-end">
-      {/* Background Image - full wide-angle, no crop */}
-      <div className="absolute inset-0 bg-foreground">
+      {/* Background Image - wide landscape, text goes into the sky area */}
+      <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Drahožická dolina v jeseni - pohľad na zelené kopce a lesy v pohorí Tribeč"
-          className="w-full h-full object-cover object-center"
-          style={{ imageRendering: "auto" }}
+          alt="Drahožická dolina na jar - kvitnúca čerešňa a zelené kopce v pohorí Tribeč"
+          className="w-full h-full object-cover object-bottom"
         />
-        {/* Subtle gradient only at bottom-left for text readability */}
+        {/* Gentle gradient at bottom-left for text readability */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, hsl(30 10% 10% / 0.55) 0%, hsl(30 10% 10% / 0.25) 50%, transparent 75%)",
-          }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to top, hsl(30 10% 10% / 0.4) 0%, transparent 40%)",
+              "linear-gradient(to top, hsl(30 10% 10% / 0.45) 0%, hsl(30 10% 10% / 0.15) 35%, transparent 55%)",
           }}
         />
       </div>
 
-      {/* Content – positioned bottom-left in the "empty" space */}
+      {/* Content – bottom-left, landscape stays visible */}
       <div className="relative z-10 container-wide pb-24 pt-40">
         <div className="max-w-xl">
           <h1 className="heading-hero text-primary-foreground opacity-0 animate-slide-up mb-5">
