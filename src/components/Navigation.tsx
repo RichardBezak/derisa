@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logoImage from "@/assets/logo-derisa.png";
+import logoImage from "@/assets/logo-derisa-transparent.png";
 
 const navItems = [
   { href: "#o-nas", label: "O nás" },
@@ -37,7 +37,7 @@ export function Navigation() {
             src={logoImage}
             alt="DERISA o.z."
             className={`h-10 md:h-12 w-auto transition-all ${
-              isScrolled ? "" : "brightness-0 invert"
+              isScrolled ? "" : "invert brightness-200"
             }`}
           />
         </a>

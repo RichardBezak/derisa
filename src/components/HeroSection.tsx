@@ -32,7 +32,7 @@ export function HeroSection() {
       <div className="relative z-10 container-wide pt-32 md:pt-40">
         <div className="max-w-lg ml-auto text-right">
           <p
-            className="text-body-large text-primary-foreground/95 mb-3 opacity-0 animate-slide-up"
+            className="text-body-large text-primary-foreground mb-3 opacity-0 animate-slide-up"
             style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
           >
             Rodinné občianske združenie, ktoré žije a tvorí v Drahožickej
@@ -40,7 +40,7 @@ export function HeroSection() {
             starostlivosťou o krajinu.
           </p>
           <p
-            className="text-base text-primary-foreground/75 max-w-md ml-auto opacity-0 animate-slide-up"
+            className="text-base text-primary-foreground/80 max-w-md ml-auto opacity-0 animate-slide-up"
             style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
           >
             Tu sme vytvorili našu Čarožicu – energeticky nezávislú usadlosť
