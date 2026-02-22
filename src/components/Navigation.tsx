@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logoImage from "@/assets/logo-derisa-transparent.png";
+import { DerisaLogo } from "./DerisaLogo";
 
 const navItems = [
   { href: "#o-nas", label: "O nás" },
@@ -33,12 +33,11 @@ export function Navigation() {
       <div className="container-wide flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center">
-          <img
-            src={logoImage}
-            alt="DERISA o.z."
-            className={`h-10 md:h-12 w-auto transition-all ${
-              isScrolled ? "" : "invert brightness-200"
+          <DerisaLogo
+            className={`transition-all ${
+              isScrolled ? "h-8 md:h-10" : "h-10 md:h-12"
             }`}
+            color={isScrolled ? "hsl(25, 45%, 55%)" : "white"}
           />
         </a>
 
