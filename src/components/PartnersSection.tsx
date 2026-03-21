@@ -51,7 +51,7 @@ export function PartnersSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {partners.map((partner) => (
             <a
               key={partner.name}
@@ -64,7 +64,7 @@ export function PartnersSection() {
                 <img
                   src={partner.logo}
                   alt={`Logo ${partner.name}`}
-                  className="max-h-20 max-w-[180px] w-auto object-contain"
+                  className={partner.logoClass}
                 />
               </div>
               <h3 className="heading-subsection text-foreground mb-3 group-hover:text-accent transition-colors text-xl md:text-2xl">
