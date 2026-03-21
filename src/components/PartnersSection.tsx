@@ -1,11 +1,13 @@
 import partnerEuronlab from "@/assets/partner-euronlab.png";
 import partnerEsi from "@/assets/partner-esi.png";
 import partnerSklenenka from "@/assets/partner-sklenenka.png";
+import partnerPohodaci from "@/assets/partner-pohodaci.png";
 
 const partners = [
   {
     name: "EuronLab",
     logo: partnerEuronlab,
+    logoClass: "max-h-20 max-w-[220px] w-auto object-contain scale-150",
     url: "https://euronlab.lovable.app/",
     description:
       "Nezávislé analytické a poradenské štúdio z Estónska. EuronLab nás podporuje finančne aj odborne – pomáha nám riešiť komplexné výzvy a prináša know-how v oblasti stratégie, udržateľnosti a systémového myslenia.",
@@ -13,16 +15,26 @@ const partners = [
   {
     name: "ESI",
     logo: partnerEsi,
+    logoClass: "max-h-20 max-w-[180px] w-auto object-contain",
     url: "https://esi.live/o-nas/",
     description:
-      "Občianske združenie zamerané na zvyšovanie kvality života a udržateľný rozvoj. Spoločne realizujeme projekt Živá krajina \u2013 aktívny človek \u2013 program komunitnej regenerácie prepájajúci environmentálne opatrenia, vzdelávanie a komunitný život.",
+      "Občianske združenie zamerané na zvyšovanie kvality života a udržateľný rozvoj. Spoločne realizujeme projekt Živá krajina – aktívny človek – program komunitnej regenerácie prepájajúci environmentálne opatrenia, vzdelávanie a komunitný život.",
   },
   {
     name: "Skleněnka, z.s.",
     logo: partnerSklenenka,
+    logoClass: "max-h-20 max-w-[180px] w-auto object-contain",
     url: "http://duhovasklenenka.cz/",
     description:
       "České združenie pracujúce s pestúnskymi rodinami. V rámci programu Erasmus+ si vymieňame skúsenosti v oblasti rešpektujúceho prístupu a facilitácie pri práci s dospelými.",
+  },
+  {
+    name: "Pohoďáci",
+    logo: partnerPohodaci,
+    logoClass: "max-h-20 max-w-[180px] w-auto object-contain",
+    url: "https://www.pohodaci.sk",
+    description:
+      "Montessori vzdelávacia skupina pre deti v školskom a predškolskom veku. Spolupracujeme v oblasti alternatívneho vzdelávania – prepájame deti s prírodou, pestovaním a reálnym životom na Čarožici.",
   },
 ];
 
@@ -39,7 +51,7 @@ export function PartnersSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {partners.map((partner) => (
             <a
               key={partner.name}
@@ -52,7 +64,7 @@ export function PartnersSection() {
                 <img
                   src={partner.logo}
                   alt={`Logo ${partner.name}`}
-                  className="max-h-20 max-w-[180px] w-auto object-contain"
+                  className={partner.logoClass}
                 />
               </div>
               <h3 className="heading-subsection text-foreground mb-3 group-hover:text-accent transition-colors text-xl md:text-2xl">
