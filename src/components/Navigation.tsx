@@ -7,6 +7,7 @@ const navItems = [
   { href: "#carozica", label: "Čarožica" },
   { href: "#pobyty", label: "Pobyty" },
   { href: "#dolina", label: "Dolina" },
+  { href: "#partneri", label: "Partneri" },
   { href: "#kontakt", label: "Kontakt" },
 ];
 
