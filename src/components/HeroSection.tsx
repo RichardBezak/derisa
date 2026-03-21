@@ -3,7 +3,7 @@ import heroImage from "@/assets/dolina-jar.jpeg";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-start justify-end">
+    <section className="relative min-h-screen flex items-start justify-end overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -29,23 +29,26 @@ export function HeroSection() {
       </div>
 
       {/* Content – top-right, aligned with nav "Kontakt" */}
-      <div className="relative z-10 container-wide pt-32 md:pt-40 flex justify-end">
-        <div className="max-w-md text-right">
-          <p
-            className="text-body-large text-primary-foreground mb-3 opacity-0 animate-slide-up"
-            style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
-          >
-            Rodinné občianske združenie, ktoré žije a tvorí v Drahožickej
-            doline – v krajine, kde sa starostlivosť o ľudí prirodzene spája so
-            starostlivosťou o krajinu.
-          </p>
-          <p
-            className="text-base text-primary-foreground/80 max-w-md ml-auto opacity-0 animate-slide-up"
-            style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
-          >
-            Tu sme vytvorili našu Čarožicu – energeticky nezávislú usadlosť
-            hlboko v pohorí Tribeč.
-          </p>
+      {/* Content – top-right, aligned with nav "Kontakt" */}
+      <div className="relative z-10 w-full">
+        <div className="container-wide pt-28 md:pt-36 flex justify-end">
+          <div className="max-w-sm md:max-w-md text-right">
+            <p
+              className="text-body-large text-primary-foreground mb-3 opacity-0 animate-slide-up"
+              style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
+            >
+              Rodinné občianske združenie, ktoré žije a tvorí v Drahožickej
+              doline – v krajine, kde sa starostlivosť o ľudí prirodzene spája so
+              starostlivosťou o krajinu.
+            </p>
+            <p
+              className="text-base text-primary-foreground/80 opacity-0 animate-slide-up"
+              style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
+            >
+              Tu sme vytvorili našu Čarožicu – energeticky nezávislú usadlosť
+              hlboko v pohorí Tribeč.
+            </p>
+          </div>
         </div>
       </div>
 
