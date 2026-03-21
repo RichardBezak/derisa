@@ -3,7 +3,7 @@ import heroImage from "@/assets/dolina-jar.jpeg";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-start justify-end">
+    <section className="relative min-h-screen flex items-start justify-end overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
