@@ -15,7 +15,7 @@ const partners = [
     logo: partnerEsi,
     url: "https://esi.live/o-nas/",
     description:
-      "Občianske združenie zamerané na zvyšovanie kvality života a udržateľný rozvoj. Spoločne realizujeme projekt „Živá krajina – aktívny človek" – program komunitnej regenerácie prepájajúci environmentálne opatrenia, vzdelávanie a komunitný život.",
+      "Občianske združenie zamerané na zvyšovanie kvality života a udržateľný rozvoj. Spoločne realizujeme projekt Živá krajina \u2013 aktívny človek \u2013 program komunitnej regenerácie prepájajúci environmentálne opatrenia, vzdelávanie a komunitný život.",
   },
   {
     name: "Skleněnka, z.s.",
