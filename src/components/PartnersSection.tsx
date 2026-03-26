@@ -37,6 +37,14 @@ const partners = [
     description:
       "Montessori vzdelávacia skupina pre deti v školskom a predškolskom veku. Spolupracujeme v oblasti alternatívneho vzdelávania – prepájame deti s prírodou, pestovaním a reálnym životom na Čarožici.",
   },
+  {
+    name: "ECCE HOMO",
+    logo: partnerEcceHomo,
+    logoClass: "max-h-20 max-w-[180px] w-auto object-contain",
+    url: "https://eccehomo.lovable.app/",
+    description:
+      "Nezisková organizácia venujúca sa dôstojnosti ľudského života a službe spoločnosti. Spája nás hlboký rešpekt voči človeku a presvedčenie, že empatia, solidarita a starostlivosť o zraniteľných dokážu meniť svet k lepšiemu.",
+  },
 ];
 
 export function PartnersSection() {
