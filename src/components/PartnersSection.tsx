@@ -2,6 +2,7 @@ import partnerEuronlab from "@/assets/partner-euronlab.png";
 import partnerEsi from "@/assets/partner-esi.png";
 import partnerSklenenka from "@/assets/partner-sklenenka.png";
 import partnerPohodaci from "@/assets/partner-pohodaci.png";
+import partnerEcceHomo from "@/assets/partner-eccehomo.png";
 
 const partners = [
   {
@@ -36,6 +37,14 @@ const partners = [
     description:
       "Montessori vzdelávacia skupina pre deti v školskom a predškolskom veku. Spolupracujeme v oblasti alternatívneho vzdelávania – prepájame deti s prírodou, pestovaním a reálnym životom na Čarožici.",
   },
+  {
+    name: "ECCE HOMO",
+    logo: partnerEcceHomo,
+    logoClass: "max-h-20 max-w-[180px] w-auto object-contain",
+    url: "https://eccehomo.lovable.app/",
+    description:
+      "Nezisková organizácia venujúca sa dôstojnosti ľudského života a službe spoločnosti. Spája nás hlboký rešpekt voči človeku a presvedčenie, že empatia, solidarita a starostlivosť o zraniteľných dokážu meniť svet k lepšiemu.",
+  },
 ];
 
 export function PartnersSection() {
@@ -51,7 +60,7 @@ export function PartnersSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 lg:gap-12">
           {partners.map((partner) => (
             <a
               key={partner.name}
