@@ -60,7 +60,7 @@ export function PartnersSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 lg:gap-12">
           {partners.map((partner) => (
             <a
               key={partner.name}
