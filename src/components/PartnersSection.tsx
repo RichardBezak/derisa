@@ -2,6 +2,7 @@ import partnerEuronlab from "@/assets/partner-euronlab.png";
 import partnerEsi from "@/assets/partner-esi.png";
 import partnerSklenenka from "@/assets/partner-sklenenka.png";
 import partnerPohodaci from "@/assets/partner-pohodaci.png";
+import partnerEcceHomo from "@/assets/partner-eccehomo.png";
 
 const partners = [
   {
