@@ -79,7 +79,7 @@ export function RetreatsSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-stretch mb-16">
           {/* Slideshow - left */}
           <div className="relative aspect-[3/4] max-h-[500px] overflow-hidden rounded-sm shadow-lg mx-auto w-full">
             {slideshowImages.map((image, index) => (
@@ -95,7 +95,7 @@ export function RetreatsSection() {
           </div>
 
           {/* Retreat types - right */}
-          <div className="space-y-6">
+          <div className="flex flex-col justify-between">
             {retreatTypes.map((retreat, index) => (
               <div
                 key={index}
@@ -112,10 +112,13 @@ export function RetreatsSection() {
                 </div>
               </div>
             ))}
-            <p className="text-body text-muted-foreground italic pt-4">
-              Aktuálne pripravované akcie budeme postupne pridávať.
-            </p>
           </div>
+        </div>
+
+        <div className="text-center">
+          <p className="text-body text-muted-foreground italic">
+            Aktuálne pripravované akcie budeme postupne pridávať.
+          </p>
         </div>
       </div>
     </section>
