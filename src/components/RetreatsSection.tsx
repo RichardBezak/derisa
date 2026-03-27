@@ -79,41 +79,43 @@ export function RetreatsSection() {
           </p>
         </div>
 
-        {/* Slideshow */}
-        <div className="relative aspect-[21/9] max-h-[400px] overflow-hidden rounded-sm shadow-lg mb-16">
-          {slideshowImages.map((image, index) => (
-            <img
-              key={index}
-              src={image.src}
-              alt={image.alt}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-                index === currentIndex ? "opacity-100" : "opacity-0"
-              }`}
-            />
-          ))}
-        </div>
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          {/* Slideshow - left */}
+          <div className="relative aspect-[3/4] max-h-[500px] overflow-hidden rounded-sm shadow-lg mx-auto w-full">
+            {slideshowImages.map((image, index) => (
+              <img
+                key={index}
+                src={image.src}
+                alt={image.alt}
+                className={`absolute inset-0 w-full h-full object-contain bg-muted transition-opacity duration-1000 ${
+                  index === currentIndex ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            ))}
+          </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {retreatTypes.map((retreat, index) => (
-            <div
-              key={index}
-              className="group p-8 bg-card rounded-sm border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300"
-            >
-              <retreat.icon className="w-10 h-10 text-primary mb-6 group-hover:scale-110 transition-transform" />
-              <h3 className="font-serif text-xl text-foreground mb-3">
-                {retreat.title}
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                {retreat.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-16 text-center">
-          <p className="text-body text-muted-foreground italic">
-            Aktuálne pripravované akcie budeme postupne pridávať.
-          </p>
+          {/* Retreat types - right */}
+          <div className="space-y-6">
+            {retreatTypes.map((retreat, index) => (
+              <div
+                key={index}
+                className="group flex items-start gap-5 p-6 bg-card rounded-sm border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+              >
+                <retreat.icon className="w-8 h-8 text-primary shrink-0 mt-1 group-hover:scale-110 transition-transform" />
+                <div>
+                  <h3 className="font-serif text-xl text-foreground mb-2">
+                    {retreat.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {retreat.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+            <p className="text-body text-muted-foreground italic pt-4">
+              Aktuálne pripravované akcie budeme postupne pridávať.
+            </p>
+          </div>
         </div>
       </div>
     </section>
