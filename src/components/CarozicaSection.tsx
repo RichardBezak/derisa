@@ -46,6 +46,7 @@ const features = [
 
 export function CarozicaSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
