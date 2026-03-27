@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Lightbox } from "./Lightbox";
 import sunsetPond from "@/assets/sunset-pond.jpeg";
 import dolina1 from "@/assets/dolina-1.jpeg";
 import dolina2 from "@/assets/dolina-2.jpeg";
