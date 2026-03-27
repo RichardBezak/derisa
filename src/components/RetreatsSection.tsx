@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Heart, Users, BookOpen, Leaf } from "lucide-react";
+import { Lightbox } from "./Lightbox";
 import pobyty1 from "@/assets/pobyty-1.jpeg";
 import pobyty2 from "@/assets/pobyty-2.jpeg";
 import pobyty3 from "@/assets/pobyty-3.jpeg";

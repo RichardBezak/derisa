@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Droplets, Sun, Flame, Home } from "lucide-react";
+import { Lightbox } from "./Lightbox";
 import carozica1 from "@/assets/carozica-1.jpeg";
 import carozica2 from "@/assets/carozica-2.jpeg";
 import carozica3 from "@/assets/carozica-3.jpeg";
