@@ -82,7 +82,10 @@ export function RetreatsSection() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-stretch mb-16">
           {/* Slideshow - left */}
-          <div className="relative aspect-[3/4] max-h-[500px] overflow-hidden rounded-sm shadow-lg mx-auto w-full">
+          <div
+            className="relative aspect-[3/4] max-h-[500px] overflow-hidden rounded-sm shadow-lg mx-auto w-full cursor-pointer"
+            onClick={() => setLightboxIndex(currentIndex)}
+          >
             {slideshowImages.map((image, index) => (
               <img
                 key={index}
