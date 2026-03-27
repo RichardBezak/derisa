@@ -8,6 +8,12 @@ import pobyty5 from "@/assets/pobyty-5.jpg";
 import pobyty6 from "@/assets/pobyty-6.jpg";
 import pobyty7 from "@/assets/pobyty-7.jpg";
 import pobyty8 from "@/assets/pobyty-8.jpeg";
+import pobyty9 from "@/assets/pobyty-9.jpeg";
+import pobyty10 from "@/assets/pobyty-10.jpeg";
+import pobyty11 from "@/assets/pobyty-11.jpeg";
+import pobyty12 from "@/assets/pobyty-12.jpeg";
+import pobyty13 from "@/assets/pobyty-13.jpeg";
+import pobyty14 from "@/assets/pobyty-14.jpeg";
 
 const slideshowImages = [
   { src: pobyty1, alt: "Soška bohyne Zeme so sviečkou v interiéri" },
@@ -18,6 +24,12 @@ const slideshowImages = [
   { src: pobyty6, alt: "Útulná izba s dreveným stropom" },
   { src: pobyty7, alt: "Obývačka s krbom a hudobnými nástrojmi" },
   { src: pobyty8, alt: "Keramická soška s červenou sviečkou" },
+  { src: pobyty9, alt: "Kvety v džbáne so sviečkou na stole" },
+  { src: pobyty10, alt: "Meditačná sála s vianočným kruhovým oltárom" },
+  { src: pobyty11, alt: "Podkrovná sála s matracmi na spanie" },
+  { src: pobyty12, alt: "Podkrovná sála s gobelínom stromu" },
+  { src: pobyty13, alt: "Podkrovná sála s hojdacou sieťou" },
+  { src: pobyty14, alt: "Šálka čaju s kvetmi a soškou bohyne" },
 ];
 
 const retreatTypes = [
