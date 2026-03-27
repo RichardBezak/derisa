@@ -80,7 +80,7 @@ export function RetreatsSection() {
         </div>
 
         {/* Slideshow */}
-        <div className="relative aspect-[16/9] overflow-hidden rounded-sm shadow-lg mb-16">
+        <div className="relative aspect-[21/9] max-h-[400px] overflow-hidden rounded-sm shadow-lg mb-16">
           {slideshowImages.map((image, index) => (
             <img
               key={index}
