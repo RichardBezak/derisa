@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Lightbox } from "./Lightbox";
 import sunsetPond from "@/assets/sunset-pond.jpeg";
 import dolina1 from "@/assets/dolina-1.jpeg";
 import dolina2 from "@/assets/dolina-2.jpeg";
@@ -93,44 +94,12 @@ export function ValleySection() {
         </div>
       </div>
 
-      {/* Lightbox */}
-      {selectedImage !== null && (
-        <div
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 cursor-pointer"
-          onClick={() => setSelectedImage(null)}
-        >
-          <button
-            className="absolute top-6 right-6 text-white/80 hover:text-white text-4xl font-light"
-            onClick={() => setSelectedImage(null)}
-          >
-            ×
-          </button>
-          <button
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-4xl px-3"
-            onClick={(e) => {
-              e.stopPropagation();
-              setSelectedImage((selectedImage - 1 + galleryImages.length) % galleryImages.length);
-            }}
-          >
-            ‹
-          </button>
-          <img
-            src={galleryImages[selectedImage].src}
-            alt={galleryImages[selectedImage].alt}
-            className="max-h-[85vh] max-w-[90vw] object-contain"
-            onClick={(e) => e.stopPropagation()}
-          />
-          <button
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-4xl px-3"
-            onClick={(e) => {
-              e.stopPropagation();
-              setSelectedImage((selectedImage + 1) % galleryImages.length);
-            }}
-          >
-            ›
-          </button>
-        </div>
-      )}
+      <Lightbox
+        images={galleryImages}
+        selectedIndex={selectedImage}
+        onClose={() => setSelectedImage(null)}
+        onChange={setSelectedImage}
+      />
     </section>
   );
 }

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Heart, Users, BookOpen, Leaf } from "lucide-react";
+import { Lightbox } from "./Lightbox";
 import pobyty1 from "@/assets/pobyty-1.jpeg";
 import pobyty2 from "@/assets/pobyty-2.jpeg";
 import pobyty3 from "@/assets/pobyty-3.jpeg";
@@ -57,7 +58,7 @@ const retreatTypes = [
 
 export function RetreatsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % slideshowImages.length);
@@ -81,7 +82,10 @@ export function RetreatsSection() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-stretch mb-16">
           {/* Slideshow - left */}
-          <div className="relative aspect-[3/4] max-h-[500px] overflow-hidden rounded-sm shadow-lg mx-auto w-full">
+          <div
+            className="relative aspect-[3/4] max-h-[500px] overflow-hidden rounded-sm shadow-lg mx-auto w-full cursor-pointer"
+            onClick={() => setLightboxIndex(currentIndex)}
+          >
             {slideshowImages.map((image, index) => (
               <img
                 key={index}
@@ -121,6 +125,12 @@ export function RetreatsSection() {
           </p>
         </div>
       </div>
+      <Lightbox
+        images={slideshowImages}
+        selectedIndex={lightboxIndex}
+        onClose={() => setLightboxIndex(null)}
+        onChange={setLightboxIndex}
+      />
     </section>
   );
 }

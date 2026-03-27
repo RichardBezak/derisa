@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Droplets, Sun, Flame, Home } from "lucide-react";
+import { Lightbox } from "./Lightbox";
 import carozica1 from "@/assets/carozica-1.jpeg";
 import carozica2 from "@/assets/carozica-2.jpeg";
 import carozica3 from "@/assets/carozica-3.jpeg";
@@ -45,6 +46,7 @@ const features = [
 
 export function CarozicaSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -69,7 +71,10 @@ export function CarozicaSection() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Slideshow */}
-          <div className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-lg">
+          <div
+            className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-lg cursor-pointer"
+            onClick={() => setLightboxIndex(currentIndex)}
+          >
             {slideshowImages.map((image, index) => (
               <img
                 key={index}
@@ -110,6 +115,12 @@ export function CarozicaSection() {
           </p>
         </div>
       </div>
+      <Lightbox
+        images={slideshowImages}
+        selectedIndex={lightboxIndex}
+        onClose={() => setLightboxIndex(null)}
+        onChange={setLightboxIndex}
+      />
     </section>
   );
 }
