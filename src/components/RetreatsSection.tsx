@@ -1,4 +1,24 @@
+import { useState, useEffect } from "react";
 import { Heart, Users, BookOpen, Leaf } from "lucide-react";
+import pobyty1 from "@/assets/pobyty-1.jpeg";
+import pobyty2 from "@/assets/pobyty-2.jpeg";
+import pobyty3 from "@/assets/pobyty-3.jpeg";
+import pobyty4 from "@/assets/pobyty-4.jpg";
+import pobyty5 from "@/assets/pobyty-5.jpg";
+import pobyty6 from "@/assets/pobyty-6.jpg";
+import pobyty7 from "@/assets/pobyty-7.jpg";
+import pobyty8 from "@/assets/pobyty-8.jpeg";
+
+const slideshowImages = [
+  { src: pobyty1, alt: "Soška bohyne Zeme so sviečkou v interiéri" },
+  { src: pobyty2, alt: "Ohňové miesto pred usadlosťou" },
+  { src: pobyty3, alt: "Čítací kútik s kreslom a knižnicou" },
+  { src: pobyty4, alt: "Útulná kuchyňa s výhľadom do lesa" },
+  { src: pobyty5, alt: "Izba s kreslom a posteľou" },
+  { src: pobyty6, alt: "Útulná izba s dreveným stropom" },
+  { src: pobyty7, alt: "Obývačka s krbom a hudobnými nástrojmi" },
+  { src: pobyty8, alt: "Keramická soška s červenou sviečkou" },
+];
 
 const retreatTypes = [
   {
@@ -24,6 +44,15 @@ const retreatTypes = [
 ];
 
 export function RetreatsSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % slideshowImages.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="pobyty" className="section-padding bg-background">
       <div className="container-wide">
@@ -36,6 +65,20 @@ export function RetreatsSection() {
             Na Čarožici sa konajú rôzne pobyty a stretnutia. Programy vznikajú
             organicky – podľa ľudí, ročného obdobia a potrieb krajiny.
           </p>
+        </div>
+
+        {/* Slideshow */}
+        <div className="relative aspect-[16/9] overflow-hidden rounded-sm shadow-lg mb-16">
+          {slideshowImages.map((image, index) => (
+            <img
+              key={index}
+              src={image.src}
+              alt={image.alt}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                index === currentIndex ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          ))}
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
