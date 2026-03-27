@@ -71,7 +71,10 @@ export function CarozicaSection() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Slideshow */}
-          <div className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-lg">
+          <div
+            className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-lg cursor-pointer"
+            onClick={() => setLightboxIndex(currentIndex)}
+          >
             {slideshowImages.map((image, index) => (
               <img
                 key={index}
