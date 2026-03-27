@@ -115,6 +115,12 @@ export function CarozicaSection() {
           </p>
         </div>
       </div>
+      <Lightbox
+        images={slideshowImages}
+        selectedIndex={lightboxIndex}
+        onClose={() => setLightboxIndex(null)}
+        onChange={setLightboxIndex}
+      />
     </section>
   );
 }
