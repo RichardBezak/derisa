@@ -58,7 +58,7 @@ const retreatTypes = [
 
 export function RetreatsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % slideshowImages.length);
