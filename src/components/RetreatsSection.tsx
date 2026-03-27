@@ -125,6 +125,12 @@ export function RetreatsSection() {
           </p>
         </div>
       </div>
+      <Lightbox
+        images={slideshowImages}
+        selectedIndex={lightboxIndex}
+        onClose={() => setLightboxIndex(null)}
+        onChange={setLightboxIndex}
+      />
     </section>
   );
 }
