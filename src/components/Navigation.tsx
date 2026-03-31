@@ -8,6 +8,7 @@ const navItems = [
   { href: "#pobyty", label: "Pobyty" },
   { href: "#dolina", label: "Dolina" },
   { href: "#partneri", label: "Partneri" },
+  { href: "#fond", label: "Stabilizačný fond" },
   { href: "#kontakt", label: "Kontakt" },
 ];
 
