@@ -10,7 +10,7 @@ const partners = [
     name: "EuronLab",
     logo: partnerEuronlab,
     logoClass: "max-h-20 max-w-[220px] w-auto object-contain scale-150",
-    url: "https://euronlab.lovable.app/",
+    url: "https://www.euronlab.eu",
     description:
       "Nezávislé analytické a poradenské štúdio z Estónska. EuronLab nás podporuje finančne aj odborne – pomáha nám riešiť komplexné výzvy a prináša know-how v oblasti stratégie, udržateľnosti a systémového myslenia.",
   },
@@ -42,7 +42,7 @@ const partners = [
     name: "ECCE HOMO",
     logo: partnerEcceHomo,
     logoClass: "max-h-20 max-w-[180px] w-auto object-contain",
-    url: "https://eccehomo.lovable.app/",
+    url: "https://www.eccehomo.sk",
     description:
       "Nezisková organizácia venujúca sa dôstojnosti ľudského života a službe spoločnosti. Spája nás hlboký rešpekt voči človeku a presvedčenie, že empatia, solidarita a starostlivosť o zraniteľných dokážu meniť svet k lepšiemu.",
   },
