@@ -3,6 +3,7 @@ import partnerEsi from "@/assets/partner-esi.png";
 import partnerSklenenka from "@/assets/partner-sklenenka.png";
 import partnerPohodaci from "@/assets/partner-pohodaci.png";
 import partnerEcceHomo from "@/assets/partner-eccehomo.png";
+import partnerTsok from "@/assets/partner-tsok.png";
 
 const partners = [
   {
@@ -44,6 +45,14 @@ const partners = [
     url: "https://eccehomo.lovable.app/",
     description:
       "Nezisková organizácia venujúca sa dôstojnosti ľudského života a službe spoločnosti. Spája nás hlboký rešpekt voči človeku a presvedčenie, že empatia, solidarita a starostlivosť o zraniteľných dokážu meniť svet k lepšiemu.",
+  },
+  {
+    name: "TSOK",
+    logo: partnerTsok,
+    logoClass: "max-h-20 max-w-[200px] w-auto object-contain",
+    url: "http://t-sok.sk/",
+    description:
+      "Thajsko-slovenská obchodná komora, ktorá od roku 2008 buduje most medzi Slovenskom a Thajskom. Podporuje obchodné partnerstvá, kultúrnu výmenu a vzájomné porozumenie oboch krajín.",
   },
 ];
 
