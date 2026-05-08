@@ -42,7 +42,7 @@ const partners = [
     name: "ECCE HOMO",
     logo: partnerEcceHomo,
     logoClass: "max-h-20 max-w-[180px] w-auto object-contain",
-    url: "https://www.eccehomo.sk",
+    url: "https://eccehomo.sk",
     description:
       "Nezisková organizácia venujúca sa dôstojnosti ľudského života a službe spoločnosti. Spája nás hlboký rešpekt voči človeku a presvedčenie, že empatia, solidarita a starostlivosť o zraniteľných dokážu meniť svet k lepšiemu.",
   },
