@@ -1,4 +1,5 @@
 import fondImage from "@/assets/stabilizacny-fond.jpg";
+import euronLogo from "@/assets/euron-logo.png.asset.json";
 
 export function StabilizacnyFondSection() {
   return (
