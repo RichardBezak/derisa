@@ -1,5 +1,5 @@
 import fondImage from "@/assets/stabilizacny-fond.jpg";
-import euronLogo from "@/assets/euron-logo.png.asset.json";
+import euronLogo from "@/assets/euron-logo.png";
 
 export function StabilizacnyFondSection() {
   return (
@@ -30,7 +30,7 @@ export function StabilizacnyFondSection() {
               className="flex items-center gap-4 group"
             >
               <img
-                src={euronLogo.url}
+                src={euronLogo}
                 alt="EURON logo"
                 width={64}
                 height={64}
