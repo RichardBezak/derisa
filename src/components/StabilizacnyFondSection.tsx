@@ -10,9 +10,9 @@ export function StabilizacnyFondSection() {
           <div className="accent-line mx-auto mb-6" />
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Image */}
-          <div className="order-2 lg:order-1">
+          <div className="order-2 lg:order-1 flex flex-col gap-6">
             <div className="rounded-lg overflow-hidden shadow-lg">
               <img
                 src={fondImage}
@@ -23,6 +23,23 @@ export function StabilizacnyFondSection() {
                 className="w-full h-auto object-cover"
               />
             </div>
+            <a
+              href="https://www.euron.ventures"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 group"
+            >
+              <img
+                src={euronLogo.url}
+                alt="EURON logo"
+                width={64}
+                height={64}
+                className="w-16 h-16 object-contain shrink-0"
+              />
+              <span className="text-body text-muted-foreground group-hover:text-foreground transition-colors">
+                EURON Community Partner
+              </span>
+            </a>
           </div>
 
           {/* Text */}
