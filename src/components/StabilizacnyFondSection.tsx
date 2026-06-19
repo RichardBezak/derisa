@@ -30,7 +30,7 @@ export function StabilizacnyFondSection() {
               className="flex items-center gap-4 group"
             >
               <img
-                src={euronLogo.url}
+                src={euronLogo}
                 alt="EURON logo"
                 width={64}
                 height={64}
