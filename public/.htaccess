@@ -1,0 +1,20 @@
+# DERISA – static hosting (Apache) fallback for client-side routes
+Options -MultiViews
+DirectoryIndex index.html
+RewriteEngine On
+RewriteBase /
+
+# Kids apps: /pre-deti/mumo and /pre-deti/jezko -> their own index.html
+RewriteRule ^pre-deti/(mumo|jezko)$ /pre-deti/$1/ [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^pre-deti/(mumo|jezko)/.* /pre-deti/$1/index.html [L]
+
+# Everything else that is not a real file/folder -> DERISA app
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+
+<IfModule mod_mime.c>
+  AddType audio/mpeg .mp3
+  AddType application/manifest+json .webmanifest
+</IfModule>
