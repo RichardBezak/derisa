@@ -1,4 +1,5 @@
-import lullabyAsset from "@/assets/lullaby.mp3.asset.json";
+// Local static file shipped with DERISA (public/audio/mumo-lullaby.mp3)
+const LULLABY_URL = "/audio/mumo-lullaby.mp3";
 
 /** One shared audio element, so re-renders never restart or double-play it. */
 let audio: HTMLAudioElement | null = null;
@@ -8,7 +9,7 @@ let endedHandler: (() => void) | null = null;
 export const startLullaby = (onEnded: () => void): void => {
   if (typeof window === "undefined") return;
   if (!audio) {
-    audio = new Audio(lullabyAsset.url);
+    audio = new Audio(LULLABY_URL);
     audio.preload = "auto";
     audio.loop = false;
     audio.addEventListener("ended", () => endedHandler?.());
