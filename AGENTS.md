@@ -1,0 +1,2 @@
+- Kids apps (MUMO, Ježko) live as self-contained Vite projects in `kids-apps/<app>/`, prebuilt via `npm run build:kids` into `public/pre-deti/<app>/` — keeps their Tailwind v4/React 19 stack isolated from the DERISA site.
+- All kids-app media is local (bundled or in `public/audio/`); files must stay under 10 MB each for the repo.

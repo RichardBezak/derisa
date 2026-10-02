@@ -3,18 +3,20 @@ import { Menu, X } from "lucide-react";
 import { DerisaLogo } from "./DerisaLogo";
 
 const navItems = [
-  { href: "#o-nas", label: "O nás" },
-  { href: "#carozica", label: "Čarožica" },
-  { href: "#pobyty", label: "Pobyty" },
-  { href: "#dolina", label: "Dolina" },
-  { href: "#partneri", label: "Partneri" },
-  { href: "#fond", label: "Stabilizačný fond" },
-  { href: "#kontakt", label: "Kontakt" },
+  { href: "/#o-nas", label: "O nás" },
+  { href: "/#carozica", label: "Čarožica" },
+  { href: "/#pobyty", label: "Pobyty" },
+  { href: "/#dolina", label: "Dolina" },
+  { href: "/#partneri", label: "Partneri" },
+  { href: "/#fond", label: "Stabilizačný fond" },
+  { href: "/pre-deti", label: "Pre deti" },
+  { href: "/#kontakt", label: "Kontakt" },
 ];
 
-export function Navigation() {
+export function Navigation({ solid = false }: { solid?: boolean }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [scrolled, setIsScrolled] = useState(false);
+  const isScrolled = solid || scrolled;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,7 +36,7 @@ export function Navigation() {
     >
       <div className="container-wide flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center">
+        <a href="/" className="flex items-center">
           <DerisaLogo
             className={`transition-all ${
               isScrolled ? "h-8 md:h-10" : "h-10 md:h-12"
