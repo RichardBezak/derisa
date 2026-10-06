@@ -69,7 +69,7 @@ export function StabilizacnyFondSection() {
                 Ak vás naša činnosť oslovuje a chcete ju podporiť, môžete tak urobiť darom:
               </p>
               <p className="font-mono text-lg text-foreground font-medium tracking-wide bg-secondary/50 rounded-md px-4 py-3 inline-block">
-                IBAN: SK86 0900 0000 0051 8464 0792
+                IBAN: SK64 0200 0000 0073 0222 8053
               </p>
               <p className="text-body text-muted-foreground mt-4 italic font-serif">
                 Ďakujeme, že ste súčasťou toho, čo tvoríme.
