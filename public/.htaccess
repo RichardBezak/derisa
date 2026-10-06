@@ -3,6 +3,7 @@ Options -MultiViews
 DirectoryIndex index.html
 RewriteEngine On
 RewriteBase /
+RewriteRule ^pre-deti/?$ /index.html [L]
 
 # Kids apps: /pre-deti/mumo and /pre-deti/jezko -> their own index.html
 RewriteRule ^pre-deti/(mumo|jezko)$ /pre-deti/$1/ [R=301,L]
