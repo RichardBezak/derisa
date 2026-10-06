@@ -119,7 +119,7 @@ export function RetreatsSection() {
           </div>
         </div>
 
-        <div className="text-center">
+        <div className="text-center mt-6">
           <p className="text-body text-muted-foreground italic">
             Aktuálne pripravované akcie budeme postupne pridávať.
           </p>
