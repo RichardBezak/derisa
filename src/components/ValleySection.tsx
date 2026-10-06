@@ -81,34 +81,35 @@ export function ValleySection() {
             </div>
           </div>
 
-          {/* Gallery */}
-          <div className="grid grid-cols-2 gap-3">
-            {/* First large image */}
+          {/* Main image */}
+          <div
+            className="cursor-pointer overflow-hidden rounded-sm shadow-lg"
+            onClick={() => setSelectedImage(0)}
+          >
+            <img
+              src={galleryImages[0].src}
+              alt={galleryImages[0].alt}
+              className="w-full aspect-[4/3] object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        </div>
+
+        {/* Thumbnail gallery */}
+        <div className="mt-12 grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-7 gap-2 sm:gap-3">
+          {galleryImages.slice(1).map((image, index) => (
             <div
-              className="col-span-2 cursor-pointer overflow-hidden rounded-sm shadow-lg"
-              onClick={() => setSelectedImage(0)}
+              key={index}
+              className="cursor-pointer overflow-hidden rounded-sm shadow-md"
+              onClick={() => setSelectedImage(index + 1)}
             >
               <img
-                src={galleryImages[0].src}
-                alt={galleryImages[0].alt}
-                className="w-full aspect-[16/9] object-cover hover:scale-105 transition-transform duration-500"
+                src={image.src}
+                alt={image.alt}
+                loading="lazy"
+                className="w-full aspect-square object-cover hover:scale-105 transition-transform duration-500"
               />
             </div>
-            {/* Remaining images in grid */}
-            {galleryImages.slice(1).map((image, index) => (
-              <div
-                key={index}
-                className="cursor-pointer overflow-hidden rounded-sm shadow-md"
-                onClick={() => setSelectedImage(index + 1)}
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full aspect-square object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
 
